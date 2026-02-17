@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Je mange léger ce soir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🥗 Je mange léger ce soir</h1>
+    <p>Clique et découvre un repas sain et faible en calories</p>
+    <div class="filtres">
+
+    <select id="type">
+        <option value="tout">Tous les repas</option>
+        <option value="rapide">Rapide (-15 min)</option>
+        <option value="vege">Végétarien</option>
+        <option value="tresleger">Très léger (-350 kcal)</option>
+    </select>
+
+</div>
+
+
+    <button onclick="trouverRepas()">Trouver un repas</button>
+
+    <h2 id="resultat"></h2>
+<p id="recette"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
