@@ -1,8 +1,14 @@
 body {
+  body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7f5;
-    text-align: center;
-    padding-top: 80px;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8f4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
 }
 
 h1 {
@@ -45,4 +51,41 @@ select {
     font-size: 16px;
     border-radius: 8px;
     margin-top: 20px;
+}
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    select {
+        width: 90%;
+    }
+
+    #resultat {
+        width: 90%;
+        font-size: 18px;
+    }
+}
+.app {
+    background: white;
+    max-width: 420px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
