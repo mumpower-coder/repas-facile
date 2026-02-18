@@ -132,3 +132,13 @@ function afficherFavoris() {
         listeFavoris.appendChild(li);
     });
 }
+function repasAleatoire() {
+
+    const types = ["tout", "rapide", "vege", "tresleger"];
+
+    const typeAleatoire = types[Math.floor(Math.random() * types.length)];
+
+    document.getElementById("type").value = typeAleatoire;
+
+    trouverRepas();
+}

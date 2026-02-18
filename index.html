@@ -24,11 +24,19 @@
 </div>
 
 
-    <button onclick="trouverRepas()">Trouver un repas</button>
+    <div class="actions">
+    <button onclick="trouverRepas()">🔎 Trouver un repas</button>
+    <button onclick="repasAleatoire()">🎲 Choisir pour moi</button>
+</div>
+    <div class="carte-recette">
 
-    <h2 id="resultat"></h2>
-<p id="recette"></p>
-<button id="likeBtn">❤️ J’aime ce repas</button>
+    <h2 id="resultat">Clique pour trouver ton repas 🍽️</h2>
+
+    <p id="recette"></p>
+
+    <button id="likeBtn">❤️ Ajouter aux favoris</button>
+
+</div>
 
 <h3>Mes repas favoris</h3>
 <ul id="favoris"></ul>
