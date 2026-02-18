@@ -1,4 +1,5 @@
 function trouverRepas() {
+dernierRepasCalories = repasChoisi.calories;
 
     let typeChoisi = document.getElementById("type").value;
 
@@ -149,4 +150,29 @@ document.getElementById("btnAleatoire").addEventListener("click", function () {
     const typeAleatoire = types[Math.floor(Math.random() * types.length)];
     document.getElementById("type").value = typeAleatoire;
     trouverRepas();
+});
+let totalCalories = parseInt(localStorage.getItem("calories")) || 0;
+
+const totalCaloriesText = document.getElementById("totalCalories");
+const eatBtn = document.getElementById("eatBtn");
+const resetBtn = document.getElementById("resetCalories");
+
+function updateCaloriesDisplay() {
+    totalCaloriesText.textContent = totalCalories + " kcal";
+}
+
+updateCaloriesDisplay();
+
+eatBtn.addEventListener("click", () => {
+    if (!dernierRepasCalories) return;
+
+    totalCalories += dernierRepasCalories;
+    localStorage.setItem("calories", totalCalories);
+    updateCaloriesDisplay();
+});
+
+resetBtn.addEventListener("click", () => {
+    totalCalories = 0;
+    localStorage.setItem("calories", totalCalories);
+    updateCaloriesDisplay();
 });
