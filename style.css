@@ -89,3 +89,16 @@ select {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
+#likeBtn {
+    background-color: #ff6b6b;
+    margin-top: 15px;
+}
+
+#likeBtn:hover {
+    background-color: #e25555;
+}
+
+#favoris {
+    text-align: left;
+    margin-top: 20px;
+}

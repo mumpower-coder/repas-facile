@@ -105,3 +105,30 @@ function trouverRepas() {
     document.getElementById("resultat").innerText = choix.nom;
     document.getElementById("recette").innerText = choix.recette;
 }
+let boutonLike = document.getElementById("likeBtn");
+let listeFavoris = document.getElementById("favoris");
+
+let favoris = JSON.parse(localStorage.getItem("favoris")) || [];
+
+afficherFavoris();
+
+boutonLike.addEventListener("click", function() {
+
+    let repasActuel = document.getElementById("resultat").innerText;
+
+    if (repasActuel && !favoris.includes(repasActuel)) {
+        favoris.push(repasActuel);
+        localStorage.setItem("favoris", JSON.stringify(favoris));
+        afficherFavoris();
+    }
+});
+
+function afficherFavoris() {
+    listeFavoris.innerHTML = "";
+
+    favoris.forEach(function(repas) {
+        let li = document.createElement("li");
+        li.innerText = repas;
+        listeFavoris.appendChild(li);
+    });
+}
