@@ -142,3 +142,11 @@ function repasAleatoire() {
 
     trouverRepas();
 }
+document.getElementById("btnTrouver").addEventListener("click", trouverRepas);
+
+document.getElementById("btnAleatoire").addEventListener("click", function () {
+    const types = ["tout", "rapide", "vege", "tresleger"];
+    const typeAleatoire = types[Math.floor(Math.random() * types.length)];
+    document.getElementById("type").value = typeAleatoire;
+    trouverRepas();
+});
